@@ -1,0 +1,156 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "$ref": "http://localhost/plugins/content/component/model.schema",
+    "globals": {
+        "ariaRegion": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "translatable": true
+        }
+    },
+    "properties": {
+        "_supportedLayout": {
+            "type": "string",
+            "required": true,
+            "enum": [
+                "full-width",
+                "half-width",
+                "both"
+            ],
+            "default": "both",
+            "editorOnly": true
+        },
+        "instruction": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "This is the instruction text",
+            "translatable": true
+        },
+        "lat": {
+            "type": "number",
+            "required": false,
+            "title": "Latitude",
+            "default": 0,
+            "inputType": "Number",
+            "validators": [
+                "number"
+            ]
+        },
+        "lng": {
+            "type": "number",
+            "required": false,
+            "title": "Longitude",
+            "default": 0,
+            "inputType": "Number",
+            "validators": [
+                "number"
+            ]
+        },
+        "zoom": {
+            "type": "number",
+            "required": false,
+            "title": "Zoom level",
+            "default": 0,
+            "inputType": "Number",
+            "validators": [
+                "number"
+            ]
+        },
+        "zoomPosition": {
+            "type": "string",
+            "required": false,
+            "title": "Zoom position",
+            "default": "topright",
+            "inputType": {
+                "type": "Select",
+                "options": [
+                    "topleft",
+                    "topright",
+                    "bottomleft",
+                    "bottomright"
+                ],
+                "validators": [],
+                "enum": [
+                    "topleft",
+                    "topright",
+                    "bottomleft",
+                    "bottomright"
+                ]
+            }
+        },
+        "_items": {
+            "type": "array",
+            "required": false,
+            "title": "Markers items",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "lat": {
+                        "type": "number",
+                        "required": true,
+                        "default": 0,
+                        "inputType": "Number",
+                        "validators": [
+                            "number"
+                        ]
+                    },
+                    "lng": {
+                        "type": "number",
+                        "required": true,
+                        "default": 0,
+                        "inputType": "Number",
+                        "validators": [
+                            "number"
+                        ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Text",
+                        "validators": [],
+                        "translatable": true
+                    },
+                    "description": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "TextArea",
+                        "validators": [],
+                        "translatable": true
+                    }
+                }
+            }
+        },
+        "_geoJSON": {
+            "type": "object",
+            "default": {},
+            "title": "GeoJSON",
+            "inputType": {
+                "type": "CodeEditor",
+                "mode": "json"
+            },
+            "validators": [],
+            "help": "GeoJSON data to display on the map"
+        },
+        "_defaults": {
+            "type": "object",
+            "default": {},
+            "title": "Configuration",
+            "inputType": {
+                "type": "CodeEditor",
+                "mode": "json"
+            },
+            "validators": [],
+            "help": "Configuration for the leaflet map"
+        }
+    }
+}

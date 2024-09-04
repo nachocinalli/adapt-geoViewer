@@ -1,0 +1,18 @@
+{
+  "name": "adapt-geoViewer",
+  "version": "1.0.0",
+  "framework": ">=5.19.1",
+  "homepage": "https://github.com/nachocinalli/adapt-geoViewer",
+  "bugs": "https://github.com/nachocinalli/adapt-geoViewer/issues",
+  "component": "geoViewer",
+  "targetAttribute": "_geoViewer",
+  "displayName": "Geo Viewer",
+  "description": "Geo Viewer is a component that allows you to display a map with markers and popups. It uses Leaflet.js as the mapping library.",
+  "main": "/js/adapt-geoViewer.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0",
+  "private": true
+}
