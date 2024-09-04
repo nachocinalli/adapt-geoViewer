@@ -1,4 +1,6 @@
+
 {
+  "_comment": "Using _items to create the markers on the map.",
   "_id": "c-05",
   "_parentId": "b-05",
   "_type": "component",
@@ -25,5 +27,102 @@
   "_geoJSON": {},
   "_pageLevelProgress": {
     "_isEnabled": true
+  }
+}
+
+{
+  "_comment": "Using _geoJSON to create the markers on the map.",
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "geoViewer",
+  "_classes": "",
+  "_layout": "full",
+  "title": "GeoViewer",
+  "displayTitle": "GeoViewer",
+  "body": "GeoViewer is a component that allows you to display a map with markers and popups. It uses Leaflet.js as the mapping library.",
+  "instruction": "Click on the map to see the popup.",
+  "lat": -34,
+  "lng": -64,
+  "zoom": 3,
+  "zoomPosition": "bottomright",
+  "_defaults": {},
+  "_items": [
+   
+  ],
+  "_geoJSON": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "ARG",
+        "properties": {
+          "name": "Argentina",
+          "description": "Argentina is a country located in South America. It is known for its diverse geography, which includes the Andes mountains, Pampas grasslands, and extensive coastlines along the Atlantic Ocean."
+        },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [-73.987, -55.039], 
+              [-53.505, -55.039],
+              [-53.505, -21.780],
+              [-73.987, -21.780],
+              [-73.987, -55.039]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+  ,
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}
+
+{
+  "_comment": "Using _geoJSON to create the markers on the map.",
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "geoViewer",
+  "_classes": "",
+  "_layout": "full",
+  "title": "GeoViewer",
+  "displayTitle": "GeoViewer",
+  "body": "GeoViewer is a component that allows you to display a map with markers and popups. It uses Leaflet.js as the mapping library.",
+  "instruction": "Click on the map to see the popup.",
+  "lat": -34,
+  "lng": -64,
+  "zoom": 3,
+  "zoomPosition": "bottomright",
+  "_defaults": {
+    "scrollWheelZoom": true,
+
+    "attributionControl": false
+  },
+  "_items": [],
+
+  "_geoJSON": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "id": "ARG",
+        "properties": {
+          "name": "Argentina",
+          "description": "This marker represents an approximate central location in Argentina."
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-64.0, -34.0]
+        }
+      }
+    ]
+  },
+  "_pageLevelProgress": {
+    "_isEnabled": true,
+    "_isCompletionIndicatorEnabled": false
   }
 }
