@@ -1,6 +1,51 @@
 .geoviewer {
+  &__widget.has-refs {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    @media (min-width: @device-width-large) {
+      flex-direction: row;
+    }
+    .geoviewer__map {
+      @media (min-width: @device-width-large) {
+        width: 70%;
+      }
+    }
+    .geoviewer__refs {
+      @media (min-width: @device-width-large) {
+        margin: 0;
+        width: 30%;
+      }
+    }
+  }
   &-map {
-    min-height: 500px;
     width: 100%;
+    min-height: 500px;
+  }
+  &__refs {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    width: 100%;
+
+    li {
+      div {
+        font-size: 0.9rem;
+        font-style: italic;
+        border: 1px solid #ccc;
+        padding: 0.5rem 0.75rem;
+        p {
+          margin: 0;
+        }
+      }
+      button {
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+      }
+    }
   }
 }

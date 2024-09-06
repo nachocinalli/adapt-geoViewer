@@ -24,6 +24,7 @@
       "description": "Argentina is a country in South America, bordered by Chile to the west and south, Bolivia and Paraguay to the north and Brazil and Uruguay to the northeast."
     }
   ],
+  "_mapRefs": [],
   "_geoJSON": {},
   "_pageLevelProgress": {
     "_isEnabled": true
@@ -47,9 +48,8 @@
   "zoom": 3,
   "zoomPosition": "bottomright",
   "_defaults": {},
-  "_items": [
-   
-  ],
+  "_items": [],
+  "_mapRefs": [],
   "_geoJSON": {
     "type": "FeatureCollection",
     "features": [
@@ -103,7 +103,7 @@
     "attributionControl": false
   },
   "_items": [],
-
+  "_mapRefs": [],
   "_geoJSON": {
     "type": "FeatureCollection",
     "features": [

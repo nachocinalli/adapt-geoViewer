@@ -130,6 +130,60 @@
                 }
             }
         },
+        "_mapRefs": {
+            "type": "array",
+            "required": false,
+            "title": "Markers references",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "lat": {
+                        "type": "number",
+                        "required": true,
+                        "default": 0,
+                        "inputType": "Number",
+                        "validators": [
+                            "number"
+                        ]
+                    },
+                    "lng": {
+                        "type": "number",
+                        "required": true,
+                        "default": 0,
+                        "inputType": "Number",
+                        "validators": [
+                            "number"
+                        ]
+                    },
+                    "zoom": {
+                        "type": "number",
+                        "required": false,
+                        "title": "Zoom level",
+                        "default": 10,
+                        "inputType": "Number",
+                        "validators": [
+                            "number"
+                        ]
+                    },
+                    "name": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "Text",
+                        "validators": [],
+                        "translatable": true
+                    },
+                    "description": {
+                        "type": "string",
+                        "required": false,
+                        "default": "",
+                        "inputType": "TextArea",
+                        "validators": [],
+                        "translatable": true
+                    }
+                }
+            }
+        },
         "_geoJSON": {
             "type": "object",
             "default": {},

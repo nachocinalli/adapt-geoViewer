@@ -3,6 +3,10 @@ import ComponentView from 'core/js/views/componentView';
 import 'libraries/leaflet.js';
 
 class GeoViewerView extends ComponentView {
+  preRender() {
+    this.onMapSetView = this.onMapSetView.bind(this);
+  }
+
   postRender() {
     this.setupMap();
     this.setReadyStatus();
@@ -34,6 +38,11 @@ class GeoViewerView extends ComponentView {
     const defaults = Object.assign({}, customDefaults, _defaults);
     const mapRef = 'map-' + this.model.get('_id');
     this.map = L.map(mapRef, defaults).setView([lat, lng], zoom);
+    /*
+    this.map.on('click', function (e) {
+      alert('Lat, Lon : ' + e.latlng.lat + ', ' + e.latlng.lng);
+    });
+    */
   }
 
   addTileLayer() {
@@ -66,6 +75,10 @@ class GeoViewerView extends ComponentView {
 
   setupAttributionLink() {
     this.$el.find('a').attr('target', '_blank');
+  }
+
+  onMapSetView(lat, lng, zoom) {
+    this.map.setView([lat, lng], zoom);
   }
 }
 
