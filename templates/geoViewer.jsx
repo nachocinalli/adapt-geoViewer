@@ -24,11 +24,7 @@ export default function GeoViewer({ _id, _mapRefs, onMapSetView, ...props }) {
                 <button className='geoviewer__ref-btn btn-text' onClick={() => handleClick(ref)} aria-expanded={selectedRef === ref.name}>
                   {ref.name}
                 </button>
-                {selectedRef === ref.name && (
-                  <div>
-                    <p>{ref.description}</p>
-                  </div>
-                )}
+                {selectedRef === ref.name && <div dangerouslySetInnerHTML={{ __html: ref.description }}></div>}
               </li>
             ))}
           </ul>
